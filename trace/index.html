@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>链路追踪 · index.html × UVRgspkjdwor.yml</title>
+<style>
+:root{
+  --bg:#0f1216;--panel:#171c22;--panel-2:#1d232b;--border:#2b333d;
+  --text:#dfe6ee;--muted:#8b96a3;--accent:#5ec1ff;--warn:#ffb454;--bad:#ff7a7a;--ok:#7ddfa0;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:15px/1.65 -apple-system,"Segoe UI","Microsoft YaHei",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:28px 20px 80px}
+h1{font-size:1.5rem;margin:0 0 6px}
+.sub{color:var(--muted);font-size:.9rem;margin-bottom:8px}
+.srcnote{background:var(--panel);border:1px solid var(--border);border-radius:8px;padding:10px 14px;font-size:.85rem;color:var(--muted);margin:14px 0 30px}
+.srcnote code{font-family:var(--mono);color:var(--warn)}
+h2.chain-title{font-size:1.15rem;margin:38px 0 4px;padding-top:18px;border-top:1px solid var(--border)}
+h2.chain-title .idx{color:var(--accent);font-family:var(--mono);margin-right:8px}
+.chain-desc{color:var(--muted);font-size:.88rem;margin:0 0 16px}
+.node{background:var(--panel);border:1px solid var(--border);border-radius:10px;margin:0;overflow:hidden}
+.node-head{display:flex;align-items:baseline;gap:10px;width:100%;text-align:left;background:none;border:0;color:inherit;padding:12px 16px;cursor:pointer;font:inherit}
+.node-head:hover{background:var(--panel-2)}
+.node-title{font-weight:600}
+.node-sub{color:var(--muted);font-size:.8rem;flex:1}
+.node-state{color:var(--accent);font-size:.78rem;font-family:var(--mono);white-space:nowrap}
+.node-body{border-top:1px dashed var(--border);padding:12px 16px;font-size:.88rem}
+.node.selected{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.node.selected .node-head{background:var(--panel-2)}
+.arrow{display:flex;align-items:center;gap:10px;padding:2px 0 2px 26px;color:var(--muted)}
+.arrow-line{width:2px;height:22px;background:var(--border)}
+.arrow-label{font-size:.75rem;font-family:var(--mono)}
+.kv{display:flex;gap:10px;margin:3px 0}
+.kv-k{color:var(--muted);min-width:130px;flex-shrink:0;font-size:.82rem}
+.kv-v{word-break:break-all}
+.mono{font-family:var(--mono);font-size:.82rem}
+.snippet{margin:10px 0}
+.snippet-label{color:var(--muted);font-size:.78rem;margin-bottom:4px}
+.snippet-code{background:#0a0d10;border:1px solid var(--border);border-radius:8px;padding:10px 12px;overflow:auto;font-family:var(--mono);font-size:.78rem;line-height:1.5;white-space:pre-wrap;word-break:break-all;max-height:300px}
+.badge{display:inline-block;padding:1px 8px;border-radius:999px;font-size:.72rem;font-weight:600;margin-right:6px}
+.badge-abs{background:rgba(94,193,255,.14);color:var(--accent)}
+.badge-rel{background:rgba(125,223,160,.14);color:var(--ok)}
+.badge-warn{background:rgba(255,180,84,.14);color:var(--warn)}
+.badge-bad{background:rgba(255,122,122,.14);color:var(--bad)}
+.note{color:var(--muted);font-size:.84rem;margin:8px 0}
+.diverge{border:1px solid var(--warn);border-radius:8px;padding:10px 14px;margin:10px 0;background:rgba(255,180,84,.06);font-size:.84rem}
+.lanes{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+.lane{background:var(--panel-2);border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:.82rem}
+.lane h4{margin:0 0 6px;font-size:.82rem}
+@media(max-width:720px){.lanes{grid-template-columns:1fr}}
+.tradeoff{background:var(--panel);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:8px;padding:14px 18px;margin:14px 0}
+.tradeoff h3{margin:0 0 8px;font-size:1rem}
+.tradeoff p{margin:6px 0;font-size:.88rem;color:var(--text)}
+.tradeoff .dim{color:var(--muted)}
+a{color:var(--accent)}
+.hashstate{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>链路追踪：index.html 外壳 → 载荷渲染 · SVG 双基准解析 · 定时工作流伪发布</h1>
+  <div class="sub">数据源：<code>trace/data.json</code>（仅解析事实） · 原页面与工作流保持只读 · 点击节点展开原文片段，选中态写入 <span class="hashstate" id="hashState">location.hash</span></div>
+  <div class="srcnote" id="srcNote">工作流文件 <code>.github/workflows/UVRgspkjdwor.yml</code> 不在本工作区（git 对象库中也不存在）；分析副本来自批次 _scratch 上游快照，路径见 data.json。</div>
+
+  <h2 class="chain-title"><span class="idx">①</span>本地渲染链</h2>
+  <p class="chain-desc">外壳 index.html 本地打开后：内联脚本拼接 7 个隐藏 div 的 base64 → XOR 解码 → 整体替换 DOM → 重放载荷脚本 → 9.166 秒后跳转。</p>
+  <div class="chain" id="chainLocal"></div>
+
+  <h2 class="chain-title"><span class="idx">②</span>资源路径解析链</h2>
+  <p class="chain-desc">button.svg / preview.svg 的 3 处引用全在 README.md 且全是绝对 URL；仓库根另有同名本地文件，只能按相对基准另行解析。两条基准线分别呈现，不合并。</p>
+  <div class="chain" id="chainResource"></div>
+
+  <h2 class="chain-title"><span class="idx">③</span>触发到发布目标链</h2>
+  <p class="chain-desc">定时/手动触发 → 无分支过滤（脚本硬编码 main）→ contents:write → 产物是 .github/ 下的戳记文件提交 → README 宣称的 Pages 发布目标无对应步骤与权限。</p>
+  <div class="chain" id="chainTrigger"></div>
+
+  <h2 class="chain-title"><span class="idx">④</span>两处取舍</h2>
+  <div class="tradeoff">
+    <h3>取舍一：内联脚本 / 内联样式 vs 外链 SVG —— 缓存、可维护性、相对路径解析</h3>
+    <p><b>缓存：</b>内联脚本与样式随 HTML 同生共死——零额外请求、零缓存复用，HTML 一变全部失效重传；外链 SVG 可独立设置长缓存、跨页面复用，但也因此 README 里写死的绝对 URL 命中的是远端 main 分支的缓存快照，与本地文件脱钩。</p>
+    <p><b>可维护性：</b>内联把 2.5KB 解码器钉死在页面里，改脚本必须改 HTML（本例还故意把载荷拆成 7 段 base64 藏进 DOM，进一步牺牲可读性换隐蔽）；外链 SVG 独立演进、独立审查，README 只持有一个引用。</p>
+    <p class="dim"><b>相对路径解析：</b>内联资源没有“路径”可言，天然免疫基准问题；外链资源则必须回答“相对谁解析”——README 的绝对 URL 以 raw.githubusercontent.com 的 main 目录为基准，本地同名文件以 README.md 所在目录为基准，两套基准各自解析，这正是第②段链不并线的原因。</p>
+  </div>
+  <div class="tradeoff">
+    <h3>取舍二：触发条件与分支过滤 → 反向约束产物目录与权限</h3>
+    <p><b>触发面决定过滤需求：</b>on 只有 schedule（每小时整点）与 workflow_dispatch，没有 push / pull_request，因此根本不需要 branches 过滤——分支约束退化为脚本里一行硬编码 <code>const branch = "main"</code>。</p>
+    <p><b>分支约束锁死产物目录：</b>写入目标被钉在 main 分支的 <code>.github/HISIHFPxsifNnF</code>，产物目录只能是仓库内 <code>.github/</code>，而不是 Pages 站点或 Release——触发器不给路径，路径由脚本常量决定。</p>
+    <p class="dim"><b>产物形态反推权限下限：</b>“建一个提交”只需要 <code>contents: write</code>，于是 workflow 级与 job 级重复声明同一值即够；反过来，没有 pages: write、没有部署步骤，README 宣称的 GitHub Pages 发布目标在这条链上没有任何权限与步骤支撑——触发与过滤的收窄，最终暴露为发布目标的落空。</p>
+  </div>
+</div>
+<script src="trace.js"></script>
+</body>
+</html>

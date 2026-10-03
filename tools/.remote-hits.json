@@ -1,0 +1,18 @@
+{
+  "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/preview.svg": {
+    "status": 200,
+    "bytes": 14141,
+    "contentType": "image/svg+xml",
+    "sha256": "a90d5c12836062e4ea2faeb2e7d587c0cf167238ba8741af6aaf05f202484686",
+    "checkedAt": "2026-10-03T01:39:37.858Z",
+    "live": true
+  },
+  "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg": {
+    "status": 200,
+    "bytes": 2673,
+    "contentType": "image/svg+xml",
+    "sha256": "7b6af4625428d506006f63019a6c583552387f3da5d37a0478e200aaafea432f",
+    "checkedAt": "2026-10-03T01:39:38.312Z",
+    "live": true
+  }
+}

